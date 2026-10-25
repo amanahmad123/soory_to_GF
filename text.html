@@ -1,0 +1,1800 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#180817">
+
+<title>I'm Sorry, My Love ❤️ | Aman</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ff4f93;
+    --hot-pink: #ff1978;
+    --soft-pink: #ffb6d5;
+    --text: #fff0f7;
+    --muted: #d8b2c8;
+    --glass: rgba(48, 12, 38, .72);
+    --border: rgba(255, 135, 190, .28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(ellipse at 15% 15%, #4b163f 0, transparent 38%),
+        radial-gradient(ellipse at 85% 50%, #30102d 0, transparent 42%),
+        linear-gradient(135deg, #100610, #21091d 50%, #100610);
+    overflow-x: hidden;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#particles {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ambient-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: .2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glow-one {
+    background: #ff1978;
+    top: 5%;
+    left: -150px;
+}
+
+.glow-two {
+    background: #a72aff;
+    bottom: 0;
+    right: -150px;
+}
+
+.page {
+    position: relative;
+    z-index: 1;
+    width: min(1180px, 100%);
+    margin: auto;
+    padding: 24px;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+    margin-bottom: 45px;
+    background: rgba(22, 6, 20, .75);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+}
+
+.brand {
+    color: var(--soft-pink);
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 17px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 12px;
+    transition: color .2s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: white;
+    background: rgba(255, 255, 255, .05);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff4f93, #e91e72);
+    border-color: transparent;
+    box-shadow: 0 10px 35px rgba(255, 25, 120, .22);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 14px 45px rgba(255, 25, 120, .4);
+}
+
+.btn-secondary {
+    color: var(--soft-pink);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.hero-copy {
+    text-align: left;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 9px 15px;
+    margin-bottom: 20px;
+    color: var(--soft-pink);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    background: rgba(255, 79, 147, .08);
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 86px);
+    line-height: 1.04;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.script {
+    display: block;
+    color: var(--pink);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-shadow: 0 0 28px rgba(255, 79, 147, .35);
+}
+
+.hero-copy > p {
+    max-width: 530px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* HERO HEART */
+
+.hero-visual {
+    min-height: 400px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.orbit {
+    position: absolute;
+    width: min(350px, 85vw);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 182, 213, .2);
+    border-radius: 50%;
+    animation: orbit 28s linear infinite;
+}
+
+.orbit::before,
+.orbit::after {
+    content: "💗";
+    position: absolute;
+    font-size: 24px;
+}
+
+.orbit::before {
+    top: 15%;
+    left: 7%;
+}
+
+.orbit::after {
+    bottom: 12%;
+    right: 5%;
+}
+
+@keyframes orbit {
+    to { transform: rotate(360deg); }
+}
+
+.hero-heart {
+    width: 240px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 30% 25%, #ff91bf, transparent 35%),
+        linear-gradient(145deg, #ff4f93, #a60b58);
+    clip-path: path("M120 215 C100 195 10 135 10 75 C10 10 85 0 120 45 C155 0 230 10 230 75 C230 135 140 195 120 215 Z");
+    filter: drop-shadow(0 0 35px rgba(255, 25, 120, .5));
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+.hero-heart span {
+    font-size: 67px;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+}
+
+.floating-note {
+    position: absolute;
+    max-width: 170px;
+    padding: 15px;
+    background: rgba(44, 13, 37, .92);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    color: var(--soft-pink);
+    font-family: 'Dancing Script', cursive;
+    font-size: 21px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+
+.note-one {
+    top: 8%;
+    left: 0;
+    transform: rotate(-7deg);
+}
+
+.note-two {
+    bottom: 8%;
+    right: 0;
+    transform: rotate(6deg);
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 70px;
+}
+
+.stat {
+    padding: 22px 10px;
+    text-align: center;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+}
+
+.stat-icon {
+    font-size: 27px;
+    margin-bottom: 9px;
+}
+
+.stat strong {
+    display: block;
+    font-size: 13px;
+    color: white;
+}
+
+.stat span {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* SECTION STYLES */
+
+.section {
+    margin-bottom: 75px;
+    scroll-margin-top: 25px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section-heading .small {
+    color: var(--pink);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-top: 9px;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(35px, 5vw, 52px);
+    color: var(--soft-pink);
+}
+
+.section-heading p {
+    max-width: 620px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* LETTER */
+
+.letter {
+    max-width: 850px;
+    margin: auto;
+    padding: clamp(24px, 5vw, 48px);
+    background:
+        linear-gradient(135deg, rgba(255, 225, 236, .09), rgba(255, 255, 255, .025));
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 20px 70px rgba(0, 0, 0, .15);
+}
+
+.letter-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.letter-top span {
+    color: var(--pink);
+    font-size: 25px;
+}
+
+.letter-top small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.letter h3 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--soft-pink);
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    margin-bottom: 16px;
+    color: #eed5e2;
+    font-size: 13px;
+    line-height: 2.15;
+}
+
+.signature {
+    padding-top: 10px;
+    color: var(--pink) !important;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px !important;
+}
+
+/* REASONS */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 13px;
+}
+
+.reason {
+    padding: 22px 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--glass);
+    transition: transform .2s, background .2s;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 79, 147, .12);
+}
+
+.reason .emoji {
+    font-size: 31px;
+    margin-bottom: 13px;
+}
+
+.reason h3 {
+    font-size: 12px;
+    color: var(--soft-pink);
+    margin-bottom: 7px;
+}
+
+.reason p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* PROMISES */
+
+.promises {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.promise {
+    display: flex;
+    gap: 13px;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    background: var(--glass);
+}
+
+.promise .emoji {
+    font-size: 24px;
+}
+
+.promise h3 {
+    font-size: 12px;
+    color: var(--soft-pink);
+    margin-bottom: 6px;
+}
+
+.promise p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* MESSAGE GENERATOR */
+
+.message-panel {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.message-display {
+    min-height: 110px;
+    display: grid;
+    place-items: center;
+    padding: 18px 5px;
+    color: var(--soft-pink);
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(24px, 4vw, 34px);
+    line-height: 1.7;
+    transition: opacity .2s;
+}
+
+.message-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* FORGIVENESS */
+
+.forgive-panel {
+    position: relative;
+    overflow: visible;
+    max-width: 850px;
+    margin: auto;
+    padding: clamp(25px, 5vw, 50px);
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255, 79, 147, .2), transparent 55%),
+        var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+}
+
+.forgive-emoji {
+    font-size: 57px;
+    margin-bottom: 15px;
+}
+
+.forgive-panel h2 {
+    color: var(--soft-pink);
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(34px, 5vw, 51px);
+    margin-bottom: 15px;
+}
+
+.forgive-panel > p {
+    max-width: 590px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+.forgive-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    min-height: 100px;
+    margin: 25px 0;
+    position: relative;
+    overflow: visible;
+}
+
+.no-btn {
+    background: rgba(255, 255, 255, .06);
+    color: var(--muted);
+    position: relative;
+    z-index: 20;
+    touch-action: manipulation;
+    transition:
+        left .3s ease,
+        top .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.no-btn:hover {
+    box-shadow: 0 0 20px rgba(255, 79, 147, .45);
+}
+
+.final-message {
+    display: none;
+    margin-top: 22px;
+    padding: 22px;
+    border-radius: 20px;
+    background: rgba(255, 79, 147, .12);
+    border: 1px solid var(--border);
+    animation: reveal .6s ease both;
+}
+
+.final-message h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: var(--pink);
+    margin-bottom: 12px;
+}
+
+.final-message p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AMAN SIGNATURE */
+
+.aman-signature {
+    margin-top: 35px;
+    padding: 32px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 135, 190, .25);
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 79, 147, .12),
+            transparent 75%
+        );
+}
+
+.signature-heart {
+    display: inline-block;
+    font-size: 30px;
+    animation: heartbeat 1.8s ease-in-out infinite;
+}
+
+.aman-signature h2 {
+    margin-top: 12px;
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(32px, 6vw, 48px);
+    color: #ff75ad;
+    text-shadow: 0 0 25px rgba(255, 79, 147, .45);
+}
+
+.aman-signature p {
+    margin-top: 12px;
+    color: #e8bfd4;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.aman-signature .made-by {
+    color: #ffb6d5;
+    font-family: 'Dancing Script', cursive;
+    font-size: 27px;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 15px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+    position: fixed;
+    bottom: -40px;
+    z-index: 3;
+    pointer-events: none;
+    animation: float-up linear forwards;
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    15% {
+        opacity: .8;
+    }
+    to {
+        transform: translateY(-110vh) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+/* CONFETTI */
+
+.confetti {
+    position: fixed;
+    top: -30px;
+    z-index: 10;
+    pointer-events: none;
+    animation: confetti-fall 3.5s linear forwards;
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero-copy > p {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reasons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .promises {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .page {
+        padding: 14px;
+    }
+
+    .brand {
+        font-size: 25px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-visual {
+        min-height: 310px;
+    }
+
+    .hero-heart {
+        width: 190px;
+    }
+
+    .orbit {
+        width: 260px;
+    }
+
+    .floating-note {
+        max-width: 125px;
+        padding: 11px;
+        font-size: 17px;
+    }
+
+    .note-one {
+        top: 5%;
+    }
+
+    .note-two {
+        bottom: 5%;
+    }
+
+    .stats {
+        gap: 9px;
+    }
+
+    .stat {
+        padding: 17px 8px;
+    }
+
+    .reasons,
+    .promises {
+        grid-template-columns: 1fr;
+    }
+
+    .letter {
+        padding: 23px 19px;
+    }
+
+    .letter h3 {
+        font-size: 31px;
+    }
+
+    .message-panel {
+        padding: 22px 15px;
+    }
+
+    .btn {
+        font-size: 11px;
+        padding: 12px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<div class="ambient-glow glow-one"></div>
+<div class="ambient-glow glow-two"></div>
+
+<div class="page">
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a class="brand" href="#home">For My Love 💗</a>
+
+        <div class="nav-links">
+            <a href="#home">♡ Home</a>
+            <a href="#letter">💌 My Letter</a>
+            <a href="#reasons">💖 Why You</a>
+            <a href="#promises">🤝 Promises</a>
+            <a href="#messages">💬 Messages</a>
+        </div>
+
+        <a
+            class="btn btn-primary"
+            href="https://wa.me/919528876007"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            💬 WhatsApp
+        </a>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-copy">
+
+            <div class="eyebrow">
+                💌 A little letter from my heart
+            </div>
+
+            <h1>
+                I'm
+                <span class="script">So Sorry... 💗</span>
+            </h1>
+
+            <p>
+                Hey, my favorite person. 🥺❤️
+
+                If I could turn my feelings into a thousand roses,
+                I would give every single one to you.
+
+                I know I may have made a mistake, and I am truly sorry.
+                You deserve patience, kindness, respect, and love.
+
+                I made this little corner of the internet just for you,
+                because sometimes my heart has more to say than my words
+                know how to express. 🌹✨
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="btn btn-primary" href="#letter">
+                    💌 Read My Heart
+                </a>
+
+                <a class="btn btn-secondary" href="#forgive">
+                    🥺 One Little Question
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="orbit"></div>
+
+            <div class="hero-heart">
+                <span>💗</span>
+            </div>
+
+            <div class="floating-note note-one">
+                You + Me 💕
+            </div>
+
+            <div class="floating-note note-two">
+                Always in my heart 🌷
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <div class="stat-icon">💗</div>
+            <strong>All My Heart</strong>
+            <span>Every single day</span>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">🌙</div>
+            <strong>My Favorite Person</strong>
+            <span>In every little way</span>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">🌹</div>
+            <strong>Always Learning</strong>
+            <span>Trying to do better</span>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">🧸</div>
+            <strong>Your Silly Human</strong>
+            <span>Sending a warm hug</span>
+        </div>
+
+    </section>
+
+    <!-- APOLOGY LETTER -->
+
+    <section class="section" id="letter">
+
+        <div class="section-heading">
+            <div class="small">Straight from my heart 💗</div>
+            <h2>A Letter Just For You 💌</h2>
+            <p>
+                No fancy words can replace a sincere apology.
+                These are the feelings I want you to understand.
+            </p>
+        </div>
+
+        <article class="letter">
+
+            <div class="letter-top">
+                <span>💌</span>
+                <small>Written with love, just for you 🌷</small>
+            </div>
+
+            <h3>My Dearest Love, ❤️</h3>
+
+            <p>
+                I don't know the perfect way to start this letter,
+                but I know that I want to be honest with you.
+                I am truly sorry if my words or actions hurt you.
+                You never deserved to feel unimportant, unheard,
+                or less loved because of something I did. 🥺
+            </p>
+
+            <p>
+                Sometimes I can be silly, stubborn, or completely
+                clueless. 😭😂 But I never want my mistakes to make
+                you question how much you matter to me.
+            </p>
+
+            <p>
+                You are someone I care about deeply. Your happiness
+                matters to me. Your feelings matter to me. Your
+                opinions matter to me, even when I don't immediately
+                understand them.
+            </p>
+
+            <p>
+                I know an apology is not magic. It cannot instantly
+                erase hurt feelings, and I don't expect you to forget
+                everything just because I said sorry. I want to listen,
+                understand, learn, and show you through my actions
+                that I mean what I say. 🤍
+            </p>
+
+            <p>
+                If you need time, I will respect that. If you want
+                to talk, I want to listen without interrupting.
+                And if there is something I need to change,
+                I want to make a genuine effort.
+            </p>
+
+            <p>
+                I miss the little things: the smiles, the silly
+                conversations, the random laughter, and those moments
+                when even doing nothing together feels special. 🌸
+            </p>
+
+            <p>
+                I am not asking you to be happy before you are ready.
+                I am simply asking for the chance to talk honestly
+                when you feel comfortable.
+            </p>
+
+            <p>
+                You deserve to be treated with care, not just today
+                while I am apologising, but in the ordinary moments
+                that follow too. ❤️
+            </p>
+
+            <p>
+                So, from the bottom of my heart, I am sorry.
+                No pressure, no excuses, just a sincere apology
+                and a promise to try to do better.
+            </p>
+
+            <p class="signature">
+                With all my love and one very big hug, 🤗💗
+                <br>
+                Your silly human 🌹
+            </p>
+
+        </article>
+
+    </section>
+
+    <!-- REASONS -->
+
+    <section class="section" id="reasons">
+
+        <div class="section-heading">
+            <div class="small">A little reminder 🌷</div>
+            <h2>10 Little Things I Adore About You 💖</h2>
+            <p>
+                Not because you have to be perfect,
+                but because you are wonderfully yourself.
+            </p>
+        </div>
+
+        <div class="reasons">
+
+            <article class="reason">
+                <div class="emoji">😊</div>
+                <h3>Your Smile</h3>
+                <p>It can brighten an ordinary day.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">🫶</div>
+                <h3>Your Kind Heart</h3>
+                <p>The care you show means so much.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">😂</div>
+                <h3>Your Laugh</h3>
+                <p>Even silly jokes become special.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">🌸</div>
+                <h3>Your Personality</h3>
+                <p>You have your own beautiful way of being.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">✨</div>
+                <h3>Your Uniqueness</h3>
+                <p>There is nobody quite like you.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">💬</div>
+                <h3>Our Conversations</h3>
+                <p>I treasure the little things we share.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">🧠</div>
+                <h3>Your Thoughts</h3>
+                <p>I want to understand your point of view.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">🦋</div>
+                <h3>Your Growth</h3>
+                <p>I admire the person you continue to become.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">🌈</div>
+                <h3>Your Energy</h3>
+                <p>You bring your own color to life.</p>
+            </article>
+
+            <article class="reason">
+                <div class="emoji">💗</div>
+                <h3>Simply You</h3>
+                <p>You matter without needing to prove anything.</p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- PROMISES -->
+
+    <section class="section" id="promises">
+
+        <div class="section-heading">
+            <div class="small">More than words 🤝</div>
+            <h2>Promises I Want To Keep 🌹</h2>
+            <p>
+                A real apology means making an effort
+                after the words have been said.
+            </p>
+        </div>
+
+        <div class="promises">
+
+            <article class="promise">
+                <div class="emoji">👂</div>
+                <div>
+                    <h3>To Listen Better</h3>
+                    <p>
+                        I want to hear your feelings without
+                        immediately becoming defensive.
+                    </p>
+                </div>
+            </article>
+
+            <article class="promise">
+                <div class="emoji">🫶</div>
+                <div>
+                    <h3>To Respect You</h3>
+                    <p>
+                        Your boundaries, opinions, and choices
+                        deserve respect.
+                    </p>
+                </div>
+            </article>
+
+            <article class="promise">
+                <div class="emoji">🌷</div>
+                <div>
+                    <h3>To Be Patient</h3>
+                    <p>
+                        I want to give difficult conversations
+                        the time and care they need.
+                    </p>
+                </div>
+            </article>
+
+            <article class="promise">
+                <div class="emoji">💬</div>
+                <div>
+                    <h3>To Communicate Honestly</h3>
+                    <p>
+                        I want to explain my feelings clearly
+                        and listen to yours.
+                    </p>
+                </div>
+            </article>
+
+            <article class="promise">
+                <div class="emoji">🧸</div>
+                <div>
+                    <h3>To Keep The Fun Alive</h3>
+                    <p>
+                        More silly jokes, warm hugs, and
+                        moments worth smiling about.
+                    </p>
+                </div>
+            </article>
+
+            <article class="promise">
+                <div class="emoji">❤️</div>
+                <div>
+                    <h3>To Show It Through Actions</h3>
+                    <p>
+                        I want my actions to match the care
+                        and respect I say I have for you.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- CUTE MESSAGES -->
+
+    <section class="section" id="messages">
+
+        <div class="section-heading">
+            <div class="small">A little smile, maybe? 🥺</div>
+            <h2>Little Messages From My Heart 💌</h2>
+            <p>
+                Press the button for another cute, flirty,
+                or heartfelt message.
+            </p>
+        </div>
+
+        <div class="message-panel">
+
+            <div class="message-display"
+                 id="messageDisplay"
+                 aria-live="polite">
+                If hugs could travel through a screen,
+                you would have received the biggest one already. 🤗💗
+            </div>
+
+            <div class="message-controls">
+
+                <button class="btn btn-primary" id="moreMessage">
+                    💕 One More Message
+                </button>
+
+                <a
+                    class="btn btn-secondary"
+                    href="https://wa.me/919528876007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    💬 Talk To Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORGIVENESS -->
+
+    <section class="section" id="forgive">
+
+        <div class="forgive-panel">
+
+            <div class="forgive-emoji">🥺🧸💗</div>
+
+            <h2>Can We Talk, My Love? 🌷</h2>
+
+            <p>
+                I know I cannot demand forgiveness,
+                and I don't want you to feel pressured.
+                I just wanted to show you how much I care
+                and say that I am genuinely sorry.
+
+                Whenever you feel ready, I would love
+                the chance to listen and make things right. ❤️
+            </p>
+
+            <div class="forgive-buttons" id="forgiveButtons">
+
+                <button class="btn btn-primary" id="yesButton">
+                    💖 Yes, Let's Talk
+                </button>
+
+                <button class="btn no-btn" id="noButton">
+                    🙈 Not Yet
+                </button>
+
+            </div>
+
+            <p id="responseMessage"
+               aria-live="polite"
+               style="color: var(--soft-pink); font-size: 13px;">
+                No rush, sweetheart. Take your time. 🌸
+            </p>
+
+            <div class="final-message" id="finalMessage">
+
+                <h3>Thank You For Hearing Me Out 💗</h3>
+
+                <p>
+                    This little website cannot say everything
+                    I feel, but I hope it shows that I care.
+
+                    Thank you for giving my words a moment
+                    of your time. Whenever you are ready,
+                    I am here to listen. 🤗🌹
+
+                    <br><br>
+
+                    Sending you one gentle hug,
+                    one tiny forehead kiss,
+                    and approximately a million hearts. 😘💖
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="aman-signature">
+
+            <div class="signature-heart">💖✨💖</div>
+
+            <h2>You Love Aman? 💕</h2>
+
+            <p>
+                If this little website made you smile,
+                then its purpose is already special. 🌹
+                <br>
+                No pressure, just a little love,
+                a sincere apology, and a warm hug. 🧸💗
+            </p>
+
+            <div class="made-by">
+                Made with love by Aman ❤️
+            </div>
+
+            <p>
+                A little apology, a thousand feelings,
+                and one sincere heart. 💌
+            </p>
+
+        </div>
+
+        <p>
+            Take your time, keep smiling, and remember
+            that you deserve kindness and happiness. 🌷
+        </p>
+
+        <p>
+            © <span id="year"></span> · A little corner of love ❤️
+        </p>
+
+    </footer>
+
+</div>
+
+<script>
+/* WHATSAPP NUMBER */
+
+const WHATSAPP_NUMBER = "919528876007";
+
+/*
+  91 is India's country code.
+  The number is used for WhatsApp links only.
+*/
+
+/* MESSAGE GENERATOR */
+
+const apologyMessages = [
+    "If hugs could travel through a screen, you would have received the biggest one already. 🤗💗",
+
+    "I wish I could send you a little teddy bear carrying a handwritten apology. 🧸💌",
+
+    "Official announcement: this silly human is sorry and is trying to learn from the mistake. 😭❤️",
+
+    "I cannot promise perfection, but I can promise an honest effort to listen and do better. 🌷",
+
+    "If smiles were stars, I would wish for a thousand of them for you. ✨💖",
+
+    "You deserve kindness, respect, and someone who listens to your feelings. 🫶",
+
+    "I have prepared approximately 999 hugs, 500 silly jokes, and one very sincere apology. 😂🧸",
+
+    "No magic tricks today. Just an honest apology and a heart that hopes you are doing okay. ❤️",
+
+    "Even the fanciest website cannot replace a real conversation, but I hope this makes you smile a little. 🥺💗",
+
+    "You do not have to forgive me immediately. I just hope we can talk when you feel ready. 🌸",
+
+    "My favourite notification is still your name appearing on my phone. 📱💕",
+
+    "A little reminder: you deserve to feel heard, respected, and appreciated. Always. 🌷",
+
+    "Sending a virtual hug with extra softness, zero pressure, and unlimited love. 🤗💖",
+
+    "I am sorry for my part in what happened. I want to understand your feelings better. ❤️",
+
+    "If I could wrap this message in roses, sparkles, and a tiny teddy bear, I absolutely would. 🌹✨🧸",
+
+    "You are allowed to feel what you feel. I am here to listen whenever you want to talk. 💗",
+
+    "My heart says sorry. My brain says listen carefully next time. Both agree. 🥺❤️",
+
+    "I hope your day becomes a little brighter, whether or not you are ready to talk to me. ☀️💖",
+
+    "One sincere apology, one warm hug, and a promise to keep learning. 🤍",
+
+    "Sending you a small smile, a big hug, and all the gentleness I can fit into a message. 🫂🌸"
+];
+
+let messageIndex = 0;
+
+document.getElementById("moreMessage")
+    .addEventListener("click", function () {
+
+        messageIndex = (messageIndex + 1) % apologyMessages.length;
+
+        const display = document.getElementById("messageDisplay");
+
+        display.style.opacity = "0";
+
+        setTimeout(function () {
+            display.textContent = apologyMessages[messageIndex];
+            display.style.opacity = "1";
+        }, 180);
+
+    });
+
+/* FLOATING NO BUTTON */
+
+const yesButton = document.getElementById("yesButton");
+const noButton = document.getElementById("noButton");
+const forgiveButtons = document.getElementById("forgiveButtons");
+
+const responseMessage = document.getElementById("responseMessage");
+const finalMessage = document.getElementById("finalMessage");
+
+let noAttempts = 0;
+let noIsFloating = false;
+
+const noMessages = [
+    "Hehe! You almost caught me! 🙈💕",
+    "Wait, Aman is still saying sorry! 🥺💗",
+    "Catch me if you can! 😂💖",
+    "One more chance to read the love letter? 💌🌹",
+    "Okay, I'll stop running! Your feelings matter. ❤️"
+];
+
+function floatNoButton(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    noAttempts++;
+
+    responseMessage.textContent =
+        noMessages[Math.min(noAttempts - 1, noMessages.length - 1)];
+
+    /*
+      After five playful moves, stop the animation.
+      The visitor can still choose the button.
+    */
+
+    if (noAttempts >= 5) {
+
+        noButton.style.position = "relative";
+        noButton.style.left = "0";
+        noButton.style.top = "0";
+        noButton.style.transform = "none";
+
+        noIsFloating = false;
+
+        responseMessage.textContent =
+            "No more tricks! 😂💕 Take your time. " +
+            "I'll respect your feelings. — Aman ❤️";
+
+        return;
+    }
+
+    const area = forgiveButtons.getBoundingClientRect();
+    const button = noButton.getBoundingClientRect();
+
+    const maxX = Math.max(0, area.width - button.width);
+    const maxY = Math.max(0, area.height - button.height);
+
+    /*
+      Use a position relative to the button container.
+      Keep the button inside its available area.
+    */
+
+    if (!noIsFloating) {
+        noButton.style.position = "absolute";
+        noIsFloating = true;
+    }
+
+    noButton.style.left = Math.random() * maxX + "px";
+    noButton.style.top = Math.random() * maxY + "px";
+
+    noButton.style.transform =
+        "rotate(" + (Math.random() * 12 - 6) + "deg)";
+}
+
+/*
+  On desktop, move the button when the pointer approaches it.
+  On touchscreens, the click handler provides the playful movement.
+*/
+
+noButton.addEventListener("pointerenter", function (event) {
+
+    if (event.pointerType === "mouse") {
+        floatNoButton(event);
+    }
+
+});
+
+noButton.addEventListener("click", function (event) {
+
+    floatNoButton(event);
+
+});
+
+/* YES BUTTON */
+
+yesButton.addEventListener("click", function () {
+
+    finalMessage.style.display = "block";
+
+    responseMessage.textContent =
+        "Thank you for being willing to talk. " +
+        "Let's take things one step at a time. 💗";
+
+    celebrate();
+
+    finalMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+    });
+
+});
+
+/* CONFETTI */
+
+function celebrate() {
+
+    const emojis = [
+        "💗", "💖", "💕", "✨", "🌸", "❤️", "🌹"
+    ];
+
+    for (let i = 0; i < 45; i++) {
+
+        const item = document.createElement("span");
+
+        item.className = "confetti";
+
+        item.textContent =
+            emojis[Math.floor(Math.random() * emojis.length)];
+
+        item.style.left = Math.random() * 100 + "vw";
+
+        item.style.fontSize =
+            (15 + Math.random() * 22) + "px";
+
+        item.style.animationDuration =
+            (2.5 + Math.random() * 2.5) + "s";
+
+        document.body.appendChild(item);
+
+        setTimeout(function () {
+            item.remove();
+        }, 5500);
+
+    }
+
+}
+
+/* FLOATING HEARTS */
+
+const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+function createFloatingHeart() {
+
+    if (reducedMotion) return;
+
+    const heart = document.createElement("span");
+
+    heart.className = "floating-heart";
+
+    const emojis = [
+        "💗", "💕", "💖", "🌸", "✨", "❤️"
+    ];
+
+    heart.textContent =
+        emojis[Math.floor(Math.random() * emojis.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (13 + Math.random() * 19) + "px";
+
+    heart.style.animationDuration =
+        (7 + Math.random() * 7) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function () {
+        heart.remove();
+    }, 15000);
+
+}
+
+if (!reducedMotion) {
+    setInterval(createFloatingHeart, 900);
+}
+
+/* BACKGROUND PARTICLES */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+
+function resizeCanvas() {
+
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = window.innerWidth * ratio;
+    canvas.height = window.innerHeight * ratio;
+
+    canvas.style.width = window.innerWidth + "px";
+    canvas.style.height = window.innerHeight + "px";
+
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+    particles = Array.from(
+        {
+            length: Math.min(
+                70,
+                Math.floor(window.innerWidth / 15)
+            )
+        },
+        function () {
+
+            return {
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
+                size: Math.random() * 2 + 0.5,
+                speed: Math.random() * 0.35 + 0.08,
+                opacity: Math.random() * 0.6 + 0.1
+            };
+
+        }
+    );
+
+}
+
+function drawParticles() {
+
+    ctx.clearRect(
+        0,
+        0,
+        window.innerWidth,
+        window.innerHeight
+    );
+
+    particles.forEach(function (particle) {
+
+        ctx.beginPath();
+
+        ctx.arc(
+            particle.x,
+            particle.y,
+            particle.size,
+            0,
+            Math.PI * 2
+        );
+
+        ctx.fillStyle =
+            "rgba(255, 160, 205, " + particle.opacity + ")";
+
+        ctx.fill();
+
+        if (!reducedMotion) {
+
+            particle.y -= particle.speed;
+
+            if (particle.y < -5) {
+                particle.y = window.innerHeight + 5;
+                particle.x = Math.random() * window.innerWidth;
+            }
+
+        }
+
+    });
+
+    if (!reducedMotion) {
+        requestAnimationFrame(drawParticles);
+    }
+
+}
+
+resizeCanvas();
+drawParticles();
+
+window.addEventListener("resize", resizeCanvas);
+
+/* WHATSAPP SHARING */
+
+function createWhatsAppLink(message) {
+
+    return "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(message);
+
+}
+
+const shareButton = document.createElement("a");
+
+shareButton.className = "btn btn-primary";
+shareButton.style.margin = "20px auto 0";
+shareButton.style.width = "fit-content";
+
+shareButton.href = createWhatsAppLink(
+    "Hey ❤️ I made a little apology website for you. " +
+    "I hope it makes you smile. Whenever you're ready, " +
+    "I'd love to talk. 🌷💗"
+);
+
+shareButton.target = "_blank";
+shareButton.rel = "noopener noreferrer";
+
+shareButton.textContent =
+    "💌 Share This Apology On WhatsApp";
+
+document.querySelector("footer").prepend(shareButton);
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```
